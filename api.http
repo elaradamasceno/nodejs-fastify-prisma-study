@@ -1,0 +1,31 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+//corpo da requisição
+{
+	"title": 321,
+	"details": "new event details 2",
+	"maximumAttendees": 1
+}
+
+###
+POST http://localhost:3333/events/231dc09b-8bb2-4bd9-b560-de39c870491d/attendees
+Content-Type: application/json
+
+{
+	"name": "Elara Damasceno",
+	"email": "edl.elaradamasceno2@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/231dc09b-8bb2-4bd9-b560-de39c870491d
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/231dc09b-8bb2-4bd9-b560-de39c870491d/attendees?query=elara
+
